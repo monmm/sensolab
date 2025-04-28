@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SensoLab</string>
+    <string name="splash_alt">app_logo</string>
+    <string name="splash_string">Proyecto ralizado para la materia de PDM2025-2</string>
 </resources>
