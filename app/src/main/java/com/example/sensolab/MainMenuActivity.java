@@ -30,9 +30,8 @@ public abstract class MainMenuActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.menu_about) {
-            // Intent intent = new Intent(this, CreditosActivity.class);
-            // startActivity(intent);
-            Toast.makeText(this, "To-Do ...", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, CreditosActivity.class);
+            startActivity(intent);
             return true;
         } else if (id == R.id.menu_connect) {
             new IpDialogFragment().show(getSupportFragmentManager(), "IpDialog");

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="#1f467e"
+                android:textSize="16sp"
+                android:fontFamily="@fonts/Montserrat-SemiBold"
+                android:text="Proyecto realizado gracias al Programa PAPIME Número PE000000 Sensores"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="#1f467e"
+                android:textSize="16sp"
+                android:fontFamily="@fonts/Montserrat-SemiBold"
+                android:text="Programación de Dispositivos Móviles"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="#1f467e"
+                android:textSize="13sp"
+                android:fontFamily="@fonts/Montserrat-SemiBold"
+                android:text="M. en D.M. Ana Libia Eslava Cervantes \n Profesora de Asignatura, Facultad de Ciencias \n ICAT, UNAM"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:textAlignment="center"
+                android:textColor="#1f467e"
+                android:textSize="13sp"
+                android:fontFamily="@fonts/Montserrat-SemiBold"
+                android:text="Mónica Miranda Mijangos \n Ayudante de Laboratorio, Facultad de Ciencias \n ICAT, UNAM"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:textAlignment="center"
+                android:textColor="#1f467e"
+                android:textSize="13sp"
+                android:fontFamily="@fonts/Montserrat-SemiBold"
+                android:text="Irvin Javier Cruz Gónzalez \n Ayudante de Profesor, Facultad de Ciencias \n ICAT, UNAM"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="#1f467e"
+                android:textSize="16sp"
+                android:fontFamily="@fonts/Montserrat-SemiBold"
+                android:text="Instituto de Ciencias Aplicadas y Tecnología"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="#1f467e"
+                android:textSize="13sp"
+                android:fontFamily="@fonts/Montserrat-SemiBold"
+                android:text="Dr. Ricardo Castañeda Martínez \n Técnico Académico Titular \n ICAT, UNAM"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:textAlignment="center"
+                android:textStyle="bold|italic"
+                android:textColor="#1f467e"
+                android:textSize="16sp"
+                android:fontFamily="@fonts/Montserrat-SemiBold"
+                android:text="Desarrollo de la aplicación"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="#1f467e"
+                android:textSize="16sp"
+                android:fontFamily="@fonts/Montserrat-SemiBold"
+                android:text="Responsables de Contenidos"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="#1f467e"
+                android:textSize="13sp"
+                android:fontFamily="@fonts/Montserrat-SemiBold"
+                android:text="Nombre"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="#1f467e"
+                android:textSize="16sp"
+                android:fontFamily="@fonts/Montserrat-SemiBold"
+                android:text="Idea original"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="#1f467e"
+                android:textSize="13sp"
+                android:fontFamily="@fonts/Montserrat-SemiBold"
+                android:text="Dr. Ricardo Castañeda Martínez \n Técnico Académico Titular \n ICAT, UNAM"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="#1f467e"
+                android:textSize="16sp"
+                android:fontFamily="@fonts/Montserrat-SemiBold"
+                android:text="Coordinación del desarrollo de la aplicación"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="#1f467e"
+                android:textSize="13sp"
+                android:fontFamily="@fonts/Montserrat-SemiBold"
+                android:text="Ana Libia Eslava Cervantes \n Técnico académico \n ICAT, UNAM"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="#1f467e"
+                android:textSize="16sp"
+                android:fontFamily="@fonts/Montserrat-SemiBold"
+                android:text="Líder de desarrollo"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="#1f467e"
+                android:textSize="13sp"
+                android:fontFamily="@fonts/Montserrat-SemiBold"
+                android:text="Mónica Miranda Mijangos \n Colaboradora del Proyecto \n ICAT, UNAM"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="#1f467e"
+                android:textSize="16sp"
+                android:fontFamily="@fonts/Montserrat-SemiBold"
+                android:text="Desarrollo"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:textAlignment="center"
+                android:textColor="#1f467e"
+                android:textSize="13sp"
+                android:fontFamily="@fonts/Montserrat-SemiBold"
+                android:text="Nombre 1 \n Colaborador del Proyecto \n FC, UNAM"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:textAlignment="center"
+                android:textColor="#1f467e"
+                android:textSize="13sp"
+                android:fontFamily="@fonts/Montserrat-SemiBold"
+                android:text="Nombre 2 \n Colaborador del Proyecto \n FC, UNAM"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:textAlignment="center"
+                android:textColor="#1f467e"
+                android:textSize="13sp"
+                android:fontFamily="@fonts/Montserrat-SemiBold"
+                android:text="Nombre 3 \n Colaborador del Proyecto \n FC, UNAM"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:textAlignment="center"
+                android:textColor="#1f467e"
+                android:textSize="13sp"
+                android:fontFamily="@fonts/Montserrat-SemiBold"
+                android:text="Nombre 4 \n Colaborador del Proyecto \n FC, UNAM"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="#1f467e"
+                android:textSize="16sp"
+                android:fontFamily="@fonts/Montserrat-SemiBold"
+                android:text="Diseño Visual"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="#1f467e"
+                android:textSize="13sp"
+                android:fontFamily="@fonts/Montserrat-SemiBold"
+                android:text="Nombre"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="#1f467e"
+                android:textSize="16sp"
+                android:fontFamily="@fonts/Montserrat-SemiBold"
+                android:text="Evaluaciones"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:textAlignment="center"
+                android:textColor="#1f467e"
+                android:textSize="13sp"
+                android:fontFamily="@fonts/Montserrat-SemiBold"
+                android:text="Ana Libia Eslava Cervantes \n Técnico Académico \n ICAT, UNAM"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
