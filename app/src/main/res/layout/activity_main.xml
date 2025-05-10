@@ -1,19 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:layout_margin="@dimen/sensor_list_margin">
 
     <TextView
+        android:id="@+id/sensor_list_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/sensor_list_margin"
+        android:textSize="@dimen/sensor_list_text"
+        android:text="@string/sensor_list" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_margin="@dimen/app_margin" />
+
+    <!-- Temperatura -->
+    <RelativeLayout
+        android:id="@+id/sensor1_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/sensor_list_margin"
+        android:background="@drawable/rounded_background"
+        android:backgroundTint="@color/sensor_list_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/sensor_list_margin"
+            android:text="@string/sensor_1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sensor_list_text"
+            tools:ignore="RelativeOverlap" />
+
+        <ImageView
+            android:layout_width="@dimen/sensor_list_arrow"
+            android:layout_height="@dimen/sensor_list_arrow"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/sensor_list_margin"
+            android:contentDescription="@string/arrow_alt"
+            android:src="@drawable/baseline_chevron_right_24" />
+    </RelativeLayout>
+
+    <!-- Humedad -->
+    <RelativeLayout
+        android:id="@+id/sensor2_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/sensor_list_margin"
+        android:background="@drawable/rounded_background"
+        android:backgroundTint="@color/sensor_list_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/sensor_list_margin"
+            android:text="@string/sensor_2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sensor_list_text"
+            tools:ignore="RelativeOverlap" />
+
+        <ImageView
+            android:layout_width="@dimen/sensor_list_arrow"
+            android:layout_height="@dimen/sensor_list_arrow"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/sensor_list_margin"
+            android:contentDescription="@string/arrow_alt"
+            android:src="@drawable/baseline_chevron_right_24" />
+    </RelativeLayout>
+
+    <!-- Distancia -->
+    <RelativeLayout
+        android:id="@+id/sensor3_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/sensor_list_margin"
+        android:background="@drawable/rounded_background"
+        android:backgroundTint="@color/sensor_list_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/sensor_list_margin"
+            android:text="@string/sensor_3"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sensor_list_text"
+            tools:ignore="RelativeOverlap" />
+
+        <ImageView
+            android:layout_width="@dimen/sensor_list_arrow"
+            android:layout_height="@dimen/sensor_list_arrow"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/sensor_list_margin"
+            android:contentDescription="@string/arrow_alt"
+            android:src="@drawable/baseline_chevron_right_24" />
+    </RelativeLayout>
+
+    <!-- Voltaje -->
+    <RelativeLayout
+        android:id="@+id/sensor5_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/sensor_list_margin"
+        android:background="@drawable/rounded_background"
+        android:backgroundTint="@color/sensor_list_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/sensor_list_margin"
+            android:text="@string/sensor_4"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sensor_list_text"
+            tools:ignore="RelativeOverlap" />
+
+        <ImageView
+            android:layout_width="@dimen/sensor_list_arrow"
+            android:layout_height="@dimen/sensor_list_arrow"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/sensor_list_margin"
+            android:contentDescription="@string/arrow_alt"
+            android:src="@drawable/baseline_chevron_right_24" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sensor4_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/sensor_list_margin"
+        android:background="@drawable/rounded_background"
+        android:backgroundTint="@color/sensor_list_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/sensor_list_margin"
+            android:text="@string/sensor_5"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sensor_list_text"
+            tools:ignore="RelativeOverlap" />
+
+        <ImageView
+            android:layout_width="@dimen/sensor_list_arrow"
+            android:layout_height="@dimen/sensor_list_arrow"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/sensor_list_margin"
+            android:contentDescription="@string/arrow_alt"
+            android:src="@drawable/baseline_chevron_right_24" />
+    </RelativeLayout>
+
+</LinearLayout>
