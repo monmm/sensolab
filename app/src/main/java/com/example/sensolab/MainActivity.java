@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -18,7 +17,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 
-public class MainActivity extends MainMenuActivity
+public class MainActivity extends AppBarActivity
         implements IpDialogFragment.IpDialogListener {
 
     private static final int PORT = 8080;
@@ -31,6 +30,13 @@ public class MainActivity extends MainMenuActivity
         setContentView(R.layout.activity_main);
 
         showIpDialog();
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(android.view.Menu menu) {
+        menu.findItem(R.id.adjust_item).setVisible(false);
+        menu.findItem(R.id.share_item).setVisible(false);
+        return super.onPrepareOptionsMenu(menu);
     }
 
     public void showIpDialog() {
@@ -59,6 +65,7 @@ public class MainActivity extends MainMenuActivity
                 .build();
 
         client.newCall(request).enqueue(new Callback() {
+
             @Override
             public void onFailure(Call call, IOException e) {
                 runOnUiThread(() ->
@@ -88,5 +95,4 @@ public class MainActivity extends MainMenuActivity
             }
         });
     }
-
 }

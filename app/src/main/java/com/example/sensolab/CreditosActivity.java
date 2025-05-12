@@ -3,7 +3,7 @@ package com.example.sensolab;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-public class CreditosActivity extends MainMenuActivity {
+public class CreditosActivity extends AppBarActivity {
 
     @Override
     public boolean onCreateOptionsMenu(android.view.Menu menu) {
