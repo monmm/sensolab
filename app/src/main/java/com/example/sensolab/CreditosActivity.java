@@ -14,7 +14,9 @@ public class CreditosActivity extends AppBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_creditos);
+
+        getSupportActionBar().setTitle(R.string.menu_about);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
