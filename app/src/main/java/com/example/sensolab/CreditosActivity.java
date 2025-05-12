@@ -6,9 +6,17 @@ import android.view.MenuItem;
 public class CreditosActivity extends MainMenuActivity {
 
     @Override
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+        // No inflar el menú para ocultar el overflow (tres puntos)
+        return false;
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_creditos);
+
+        getSupportActionBar().setTitle(R.string.menu_about);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
