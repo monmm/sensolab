@@ -12,4 +12,10 @@
     <string name="sensor_4">Voltaje</string>
     <string name="sensor_5">Luz</string>
     <string name="arrow_alt">Continuar</string>
+    <string name="viewFormat">Visualización:</string>
+    <string name="table">Tabla</string>
+    <string name="graph">Grafica</string>
+    <string name="rhythm">Ritmo:</string>
+    <string name="rhythm_fill">Tiempo en segundos</string>
+    <string name="rhythm_hint">5s</string>
 </resources>

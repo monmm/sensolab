@@ -37,8 +37,7 @@ public abstract class AppBarActivity extends AppCompatActivity {
             new IpDialogFragment().show(getSupportFragmentManager(), "IpDialog");
             return true;
         } else if (id == R.id.adjust_item) {
-            // new ConfigDialogFragment().show(getSupportFragmentManager(), "ConfigDialog");
-            Toast.makeText(getApplicationContext(), "TO-DO...", Toast.LENGTH_SHORT).show();
+            new SensorDialogFragment().show(getSupportFragmentManager(), "SensorDialog");
             return true;
         } else if (id == R.id.share_item) {
             Toast.makeText(getApplicationContext(), "TO-DO...", Toast.LENGTH_SHORT).show();
