@@ -5,4 +5,11 @@
     <string name="menu_connect">Cambiar IP</string>
     <string name="adjust_item">Ajustes</string>
     <string name="share_item">Compartir</string>
+    <string name="sensor_list">Listado de Sensores</string>
+    <string name="sensor_1">Temperatura</string>
+    <string name="sensor_2">Humedad</string>
+    <string name="sensor_3">Distancia</string>
+    <string name="sensor_4">Voltaje</string>
+    <string name="sensor_5">Luz</string>
+    <string name="arrow_alt">Continuar</string>
 </resources>

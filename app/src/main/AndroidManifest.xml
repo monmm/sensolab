@@ -34,6 +34,10 @@
             android:exported="true">
         </activity>
         <activity
+            android:name=".SensorActivity"
+            android:exported="true">
+        </activity>
+        <activity
             android:name=".CreditosActivity"
             android:exported="true">
         </activity>
