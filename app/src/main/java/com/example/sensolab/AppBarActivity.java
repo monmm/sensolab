@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import org.jetbrains.annotations.Nullable;
 
-public abstract class MainMenuActivity extends AppCompatActivity {
+public abstract class AppBarActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -21,7 +21,7 @@ public abstract class MainMenuActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main_menu, menu);
+        inflater.inflate(R.menu.action_bar, menu);
         return true;
     }
 
@@ -29,12 +29,19 @@ public abstract class MainMenuActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.menu_about) {
+        if (id == R.id.about_item) {
             Intent intent = new Intent(this, CreditosActivity.class);
             startActivity(intent);
             return true;
-        } else if (id == R.id.menu_connect) {
+        } else if (id == R.id.connect_item) {
             new IpDialogFragment().show(getSupportFragmentManager(), "IpDialog");
+            return true;
+        } else if (id == R.id.adjust_item) {
+            // new ConfigDialogFragment().show(getSupportFragmentManager(), "ConfigDialog");
+            Toast.makeText(getApplicationContext(), "TO-DO...", Toast.LENGTH_SHORT).show();
+            return true;
+        } else if (id == R.id.share_item) {
+            Toast.makeText(getApplicationContext(), "TO-DO...", Toast.LENGTH_SHORT).show();
             return true;
         }
 

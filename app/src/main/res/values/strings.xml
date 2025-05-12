@@ -3,6 +3,8 @@
     <string name="ip_hint">192.168.1.1</string>
     <string name="menu_about">Créditos</string>
     <string name="menu_connect">Cambiar IP</string>
+    <string name="adjust_item">Ajustes</string>
+    <string name="share_item">Compartir</string>
     <string name="sensor_list">Listado de Sensores</string>
     <string name="sensor_1">Temperatura</string>
     <string name="sensor_2">Humedad</string>
