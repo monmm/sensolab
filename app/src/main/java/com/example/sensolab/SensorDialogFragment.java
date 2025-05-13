@@ -57,12 +57,19 @@ public class SensorDialogFragment extends DialogFragment {
         SharedPreferences prefs = requireActivity().getSharedPreferences("SensorPrefs", Context.MODE_PRIVATE);
         int savedRadioId = prefs.getInt("selectedRadioId", -1);
         String savedRhythm = prefs.getString("rhythmValue", "");
+        boolean enableGroup = prefs.getBoolean("groupStatus", true);
 
         if (savedRadioId != -1) {
             viewFormatOptions.check(savedRadioId);
         }
         rhythmEditText.setText(savedRhythm);
 
+        if (!enableGroup) {
+            for (int i = 0; i < viewFormatOptions.getChildCount(); i++) {
+                View child = viewFormatOptions.getChildAt(i);
+                child.setEnabled(false);
+            }
+        }
 
         AlertDialog dialog = builder.create();
 

@@ -28,7 +28,7 @@ public class MainActivity extends AppBarActivity
     private String ipAddress;
     private final OkHttpClient client = new OkHttpClient();
 
-    private boolean isConnected = false;
+    private boolean isConnected = true;
 
     private RelativeLayout[] sensorListRL = new RelativeLayout[sensorListID.length];
     private static final int[] sensorListID = {R.id.sensor1_rl, R.id.sensor2_rl,

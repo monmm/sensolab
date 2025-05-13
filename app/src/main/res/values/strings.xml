@@ -18,4 +18,6 @@
     <string name="rhythm">Ritmo:</string>
     <string name="rhythm_fill">Tiempo en segundos</string>
     <string name="rhythm_hint">5s</string>
+    <string name="fab_alt">Iniciar o detener captura</string>
+    <string name="stop_alt">Finalizar captura</string>
 </resources>
