@@ -39,9 +39,10 @@ public class SensorDialogFragment extends DialogFragment {
         }
     }
 
+    @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        AlertDialog.Builder builder = new AlertDialog.Builder(requireActivity());
         LayoutInflater inflater = requireActivity().getLayoutInflater();
 
         View view = inflater.inflate(R.layout.fragment_dialog_sensor, null);
@@ -53,66 +54,68 @@ public class SensorDialogFragment extends DialogFragment {
                 .setPositiveButton("Guardar", null)
                 .setNegativeButton("Cancelar", (dialog, id) -> dialog.cancel());
 
-
         SharedPreferences prefs = requireActivity().getSharedPreferences("SensorPrefs", Context.MODE_PRIVATE);
+        loadPreferences(prefs);
+
+        AlertDialog dialog = builder.create();
+        dialog.setCancelable(false);
+        dialog.setCanceledOnTouchOutside(false);
+
+        dialog.setOnShowListener(dialogInterface -> setupDialogUI(dialog, view, prefs));
+        return dialog;
+    }
+
+    private void loadPreferences(SharedPreferences prefs) {
         int savedRadioId = prefs.getInt("selectedRadioId", -1);
         String savedRhythm = prefs.getString("rhythmValue", "");
         boolean enableGroup = prefs.getBoolean("groupStatus", true);
 
-        if (savedRadioId != -1) {
-            viewFormatOptions.check(savedRadioId);
-        }
+        if (savedRadioId != -1) viewFormatOptions.check(savedRadioId);
         rhythmEditText.setText(savedRhythm);
 
-        if (!enableGroup) {
-            for (int i = 0; i < viewFormatOptions.getChildCount(); i++) {
-                View child = viewFormatOptions.getChildAt(i);
-                child.setEnabled(false);
-            }
+        if (!enableGroup) disableRadioGroup(viewFormatOptions);
+    }
+
+    private void disableRadioGroup(RadioGroup group) {
+        for (int i = 0; i < group.getChildCount(); i++) {
+            group.getChildAt(i).setEnabled(false);
         }
+    }
 
-        AlertDialog dialog = builder.create();
+    private void setupDialogUI(AlertDialog dialog, View view, SharedPreferences prefs) {
+        Button positiveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
+        positiveButton.setEnabled(false); // Inicialmente deshabilitado
 
-        dialog.setOnShowListener(dialogInterface -> {
-            Button positiveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
-            positiveButton.setEnabled(false); // Inicialmente deshabilitado
-
-            viewFormatOptions.setOnCheckedChangeListener((group, checkedId) -> {
-                positiveButton.setEnabled(checkedId != -1); // Habilita si hay selección
-            });
-            if (savedRadioId != -1) {
-                rhythmEditText.addTextChangedListener(new TextWatcher() {
-                    @Override
-                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
-                    @Override
-                    public void onTextChanged(CharSequence s, int start, int before, int count) {}
-                    @Override
-                    public void afterTextChanged(Editable s) {
-                        positiveButton.setEnabled(true); // Habilita si hay modificación
-
-                    }
-                });
-            }
-
-            positiveButton.setOnClickListener(v -> {
-                String rhythm = rhythmEditText.getText().toString();
-                int selectedRadioId = viewFormatOptions.getCheckedRadioButtonId();
-                RadioButton selectedRadio = view.findViewById(selectedRadioId);
-                String selectedOption = selectedRadio.getText().toString();
-
-                prefs.edit()
-                        .putInt("selectedRadioId", selectedRadioId) // ID del RadioButton
-                        .putString("rhythmValue", rhythm)
-                        .apply();
-
-                if (listener != null) {
-                    listener.onDialogSave(rhythm, selectedOption);
-                }
-                dialog.dismiss();
-            });
+        viewFormatOptions.setOnCheckedChangeListener((group, checkedId) -> {
+            positiveButton.setEnabled(checkedId != -1);
         });
 
-        return dialog;
+        rhythmEditText.addTextChangedListener(new TextWatcher() {
+            @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override public void onTextChanged(CharSequence s, int start, int before, int count) {}
+            @Override
+            public void afterTextChanged(Editable s) {
+                int checkedId = viewFormatOptions.getCheckedRadioButtonId();
+                positiveButton.setEnabled(checkedId != -1 && !s.toString().trim().isEmpty());
+            }
+        });
+
+        positiveButton.setOnClickListener(v -> {
+            String rhythm = rhythmEditText.getText().toString().trim();
+            int selectedRadioId = viewFormatOptions.getCheckedRadioButtonId();
+            RadioButton selectedRadio = view.findViewById(selectedRadioId);
+            String selectedOption = selectedRadio.getText().toString();
+
+            prefs.edit()
+                    .putInt("selectedRadioId", selectedRadioId)
+                    .putString("rhythmValue", rhythm)
+                    .apply();
+
+            if (listener != null) {
+                listener.onDialogSave(rhythm, selectedOption);
+            }
+            dialog.dismiss();
+        });
     }
 
     public static void clearSavedSensorPrefs(Context context) {
