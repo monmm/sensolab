@@ -33,14 +33,8 @@ public abstract class AppBarActivity extends AppCompatActivity {
             Intent intent = new Intent(this, CreditosActivity.class);
             startActivity(intent);
             return true;
-        } else if (id == R.id.connect_item) {
-            new IpDialogFragment().show(getSupportFragmentManager(), "IpDialog");
-            return true;
         } else if (id == R.id.adjust_item) {
             new SensorDialogFragment().show(getSupportFragmentManager(), "SensorDialog");
-            return true;
-        } else if (id == R.id.share_item) {
-            Toast.makeText(getApplicationContext(), "TO-DO...", Toast.LENGTH_SHORT).show();
             return true;
         }
 
